@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="2dp"
+    android:background="@drawable/shopinfo_item_bg">
+
+    <ImageView
+        android:id="@+id/adapter_shopinfo_icon"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/labeego_icon" />
+
+    <TextView
+        android:id="@+id/adapter_shopinfo_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:lines="2"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/adapter_shopinfo_icon" />
+
+    <LinearLayout
+        android:id="@+id/adapter_shopinfo_majian"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10"
+        app:layout_constraintTop_toBottomOf="@+id/adapter_shopinfo_name">
+
+        <TextView
+            android:id="@+id/adapter_shopinfo_manjian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shopinfo_adapter_item_manjian"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:textColor="#FEB63D"
+            android:textSize="10sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/adapter_shopinfo_baoyou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/shopinfo_adapter_item_manjian"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:textColor="#FEB63D"
+            android:textSize="10sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/adapter_shopinfo_zhekou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/shopinfo_adapter_item_manjian"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:textColor="#FEB63D"
+            android:textSize="10sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_10"
+        app:layout_constraintTop_toBottomOf="@+id/adapter_shopinfo_majian">
+
+        <TextView
+            android:id="@+id/adapter_shopinfo_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:textColor="#FD3F3D"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/adapter_shopinfo_shichangjia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_weight="1"
+            android:lines="1"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/adapter_shopinfo_howpeople"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="1" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.hechuang.labeego">
+
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.GET_TASKS" /><!--获取activity栈-->
+
+    <application
+        android:name=".base.SophixStubApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/labeego_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/labeego_iocn_round"
+        android:supportsRtl="true"
+        android:theme="@style/start_app"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="android:name">
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_app">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activity.WebsActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity"></activity>
+        <activity
+            android:name=".ui.activity.ScanWebActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity"></activity>
+        <!--登录-->
+        <activity
+            android:name=".ui.activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity"></activity>
+        <!--强制修改密码-->
+        <activity
+            android:name=".ui.activity.ForceModifyPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <!--商品列表-->
+        <activity
+            android:name=".ui.activity.GoodsHomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity">
+
+        </activity>
+        <activity
+            android:name=".ui.activity.GoodsListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity">
+
+        </activity>
+        <!--商品详情-->
+        <activity
+            android:name=".ui.activity.GoodsInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+
+        <!--购物车页面-->
+        <activity
+            android:name=".ui.activity.ShoppingCarActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity">
+
+        </activity>
+        <!--提交订单页面-->
+        <activity
+            android:name=".ui.activity.ConfirmAnOrderAcitivty"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <!--收货地址页面-->
+        <activity
+            android:name=".ui.activity.AddressActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <!--添加收货地址页面-->
+        <activity
+            android:name=".ui.activity.NewAdderssActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <!--城市选择-->
+        <activity
+            android:name=".ui.activity.SelectCityActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <!--支付结果-->
+        <activity
+            android:name=".ui.activity.PayforresulstsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <!--确认订单-->
+        <activity
+            android:name=".ui.activity.OrderTureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <!--搜索页面-->
+        <activity
+            android:name=".ui.activity.FindGoodsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <!--商家商品搜索页面-->
+        <activity
+            android:name=".ui.activity.StoreListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <!--最近订单-->
+        <activity
+            android:name=".ui.activity.AllOrderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <!--不同类型订单页面（待付款，已完成.....-->
+        <activity
+            android:name=".ui.activity.OrderTypeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <!--订单详情-->
+        <activity
+            android:name=".ui.activity.OrderInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <!--订单列表（改版）-->
+        <activity
+            android:name=".ui.activity.OrderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <!--订单搜索-->
+        <activity
+            android:name=".ui.activity.OrderSearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <!--评价页面-->
+        <activity
+            android:name=".ui.activity.CommentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <!--评价列表-->
+        <activity
+            android:name=".ui.activity.CommentListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <!--评价详情-->
+        <activity
+            android:name=".ui.activity.CommentInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <!--商品首页-->
+        <activity
+            android:name=".ui.activity.LabeegoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <!--我的蜂浆-->
+        <activity
+            android:name=".ui.activity.MyHoenyAcativity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <!--加载|九零商城-->
+        <activity
+            android:name=".ui.activity.JLWebActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <!--我的蜂蜜页面-->
+        <activity
+            android:name=".ui.activity.HoenyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <!--我的蜂力页面-->
+        <activity
+            android:name=".ui.activity.BeeForceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <!--蜂力详情-->
+        <activity
+            android:name=".ui.activity.BeeForceInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <!--修改用户名-->
+        <activity
+            android:name=".ui.activity.UserActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <!--设置页面-->
+        <activity
+            android:name=".ui.activity.SettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <!--修改密码-->
+        <activity
+            android:name=".ui.activity.ChangePWAcitivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <!--修改姓名-->
+        <activity
+            android:name=".ui.activity.SetNameActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <!--我的钱包-->
+        <activity
+            android:name=".ui.activity.WalletActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+
+        <!--我的卡包-->
+        <activity
+            android:name=".ui.activity.CardBagActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <!--支付宝-->
+        <!--<activity-->
+        <!--android:name="com.alipay.sdk.app.H5PayActivity"-->
+        <!--android:configChanges="orientation|keyboardHidden|navigation"-->
+        <!--android:exported="false"-->
+        <!--android:screenOrientation="behind" />-->
+        <!--<activity-->
+        <!--android:name="com.alipay.sdk.auth.AuthActivity"-->
+        <!--android:configChanges="orientation|keyboardHidden|navigation"-->
+        <!--android:exported="false"-->
+        <!--android:screenOrientation="behind" />-->
+        <!--商家详情-->
+        <activity
+            android:name=".ui.activity.ShopInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity"></activity>
+        <!--商家列表-->
+        <activity
+            android:name=".ui.activity.ShopListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity"></activity>
+        <!--商家商品详情-->
+        <activity
+            android:name=".ui.activity.ShopGoodsInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity">
+
+        </activity>
+        <!--搜索商家-->
+        <activity
+            android:name=".ui.activity.SearchShopActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <activity
+            android:name=".ui.activity.ShopClassifyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity"></activity>
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <activity
+            android:name=".ui.activity.BindingPhonenumberActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <!--商家商品购物车-->
+        <activity
+            android:name=".ui.activity.StoreShoppingCarActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <!--商家商品确认订单-->
+        <activity
+            android:name=".ui.activity.StoreConfirmAnOrderAcitivty"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity">
+
+        </activity>
+        <service
+            android:name=".server.DownLoadFileService"
+            android:sharedUserId="android.uid.system" />
+        <!--自動登陸-->
+        <service
+            android:name=".server.AutoLoginService"
+            android:sharedUserId="android.uid.system" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+        <!--阿里云配置-->
+        <meta-data
+            android:name="com.taobao.android.hotfix.IDSECRET"
+            android:value="25122842-1" />
+        <meta-data
+            android:name="com.taobao.android.hotfix.APPSECRET"
+            android:value="825ed733739fa0e6d1dd2364293f58d9" />
+        <meta-data
+            android:name="com.taobao.android.hotfix.RSASECRET"
+            android:value="MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCz/DvG0dXxzW43I6C1LUCvHEiPUufZo31Su4B3MKIG7gBkFD+MwBcKXF9dpjmY5c8TMKOKQ+f4UwqkMGIMKuSXi25GLlvxfz9QLub2S5Q3rWRSq8yLzs0IhOYaU+aDOWEHfTdVT40MwVY3isqkJ4T0G98H5ZfOf/x6sDE6hQi3A9Lk/YP4gG6yevvw9QRiZBt8rte+5lE+yXi2up7TVUuomK+4SxPMndYBiE3JnM8hh3WZKC9G60KhbA6fMhdF7hLgGQvoQ3H6dU4qCJqwI39pgS9Ad4L+FUUCbGEIcFy/qhYu+JZDnj7ZmJLwIqn0fPICW8+RHMgFKLsR7c4qQYpxAgMBAAECggEBAJfugh9RHoKhYTpWbuDBtGqdO3sRBvonEjF2afkzKnMjEV1p4kNUG575Xt9U5CX3SBfw5PxgWj67Cq6S0RFoW9K5NnszwxVWzwFGtlyObC2bxqYqs94I0fcxCHSNAncfRpLl1oHDR1PPGJKGLIzpd0gBBwJJgx4j1+NRPB0kE7k4rJ4dE8qvl+07WWh+Bpg9Z2MeEsYhtGPIonyQ+uZeb9qiAGWCG+sBTZaov+xpxwmnNUfQllebDBjzGNngFoVEyi0kqWInrrkjKFXzV9Mx4GJ4C/ixiYDnRWhKrtSwWH+0l4lgxYn2CheV7B5yfybAD690qWCEgnYOuDsoeIepuskCgYEA25LB2C7lEw/eUUvn/AL174I0nZpATs+xrRs6GVBq+O/yiMawwo/c8OUFi3sZaNfZc/peclo50w6ABLuk3+UyUwLGqwLyQb6MdCQey7nHAC+RpUWQ8BlfgedrsiV8YWwDdAS+1EnvLj5sodzDMlySs45q5chZc2OusJN4odd74psCgYEA0dguR5Xy5bSR4bPx1jW/Cvt2AeQQxY67EbUyNX8Ymxu0eVVNt5UKJ3EECcIp+y7zTYF6dbBMZGJ+rJ9nRPUxzsGI4NKUjQK7uidAQBUk/0tLwLqLWOZthrED2jYvrf4VkPgu0swftyGlOCkxccHOblJOn+M5KzZh+hXpOMxfAeMCgYEAjw+TlRMY1c6k/zsBr0UOkDq5pWX3OGJCVZNDy3KGACP2Vf9+84VgYuQVNMfDyne4isQ5/S+kNUthRbQsvGRM4aERaCLHTOamBJX0KrCkZA6aSqCEyqr9e1oY5T1fSOpjZZgh7Zcua2boyJ1Z4NpICw1jwMtE3NW53/p1wpzvbrkCgYAZlIXHujK657Ek11+yoiiguRigkGGvA4AwX2s4dD7WoaD1bX2k1GlBd5hrbBzb/tQv7Ym1EQGu9wbEGkZndJBWyObbqS/spJmnzqMZbLpu2Inqe5MDCkvtsGRs1FApoKCWZHqovbNcCqDuYK8jU+HLNwNYoEVWzDFTYBpnDxrBywKBgC/xG9W5D5I404hcu+MKwHu7KTsqu6G+o7jUMTmzmKxWup5URYOgeh6lgHQh22/vPMH1jCEvOv8Bb3/dCEHYhRY9qaMc1yGy/Hp4wmk1Xm9ipd2Um3hGDxvKQuNgtK2x6Th1U45I2D2iMOycDZeuO0MjC566qDievHe82R6kRPWI" />
+    </application>
+
+</manifest>

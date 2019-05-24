@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/webs_popup_layout"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/webs_popup_baocun"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/webs_popup_fenxiang"
+        android:layout_margin="3dp"
+        android:background="@drawable/webs_popup_buttong_bg"
+        android:text="保存"
+        android:textColor="@color/black"/>
+
+    <Button
+        android:id="@+id/webs_popup_fenxiang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/webs_popup_quxiao"
+        android:layout_margin="3dp"
+        android:background="@drawable/webs_popup_buttong_bg"
+        android:text="分享"
+        android:textColor="@color/black"/>
+
+    <Button
+        android:id="@+id/webs_popup_quxiao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="3dp"
+        android:background="@drawable/webs_popup_buttong_bg"
+        android:text="取消"
+        android:textColor="@color/black"/>
+</RelativeLayout>

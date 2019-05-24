@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/goodsinfo_store_bay_1dp"
+        android:orientation="vertical">
+
+        <com.hechuang.labeego.tools.ui.IdeaScrollView
+            android:id="@+id/shopgoodsinfo_ideascrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/shopgoodsinfo_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.youth.banner.Banner
+                        android:id="@+id/shopgoodsinfo_banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/shopgoodsinfo_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textColor="@color/black" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+
+                        <TextView
+                            android:id="@+id/shopgoodsinfo_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/textcolor_red"
+                            android:textSize="16sp" />
+
+                        <LinearLayout
+                            android:id="@+id/shopgoodsinfo_integral_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/goods_integral"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/shopgoodsinfo_integral"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="16dp"
+                                android:src="@drawable/fengbi_icon" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp">
+
+                        <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                            android:id="@+id/shopgoodsinfo_pingfen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:isIndicator="true"
+                            android:maxHeight="15dp"
+                            android:minHeight="15dp"
+                            android:stepSize="0.1"
+                            app:mrb_progressTint="#EE9E18"
+                            app:mrb_secondaryProgressTint="#C9C8CC" />
+
+                        <TextView
+                            android:id="@+id/shopgoodsinfo_pingfen_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@color/rules" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/shopgoodsinfo_id"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="商品id"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/shopgoodsinfo_qidingliang"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="起订量"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/shopgoodsinfo_qidingbeishu"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="起订倍数"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:background="@color/rules" />
+
+                    <LinearLayout
+                        android:id="@+id/shopgoodsinfo_guige_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/shopgoodsinfo_guige_text"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="请选择商品规格"
+                            android:textColor="@color/black" />
+
+                        <ImageView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:src="@drawable/right" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:background="@color/rules" />
+
+                    <TextView
+                        android:id="@+id/shopgoodsinfo_yunfei"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="运费政策："
+                        android:textColor="@color/black" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:background="@color/rules" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:src="@drawable/goodsinfo_store" />
+
+                        <TextView
+                            android:id="@+id/shopgoodsinfo_storename"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:gravity="center_vertical"
+
+                            android:textColor="@color/shoppingcar_go" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/shopgoodsinfo_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/rules"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/goodsinfo_pingjia" />
+
+                        <TextView
+                            android:id="@+id/shopgoodsinfo_xiangqign"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="评价"
+                            android:textColor="@color/userorder_text_color" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/shopgoodsinfo_pingjianumber"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="商品评价"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/shopgoodsinfo_comment_more"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="更多评价"
+                            android:textColor="@color/goods_item_btn_bg_selected" />
+
+                        <ImageView
+                            android:layout_width="13dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/goodsinfo_more" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/shopgoodsinfo_comment_user_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingBottom="5dp">
+
+                        <ImageView
+                            android:id="@+id/shopgoodsinfo_comment_usericon"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@mipmap/labeego_icon" />
+
+                        <TextView
+                            android:id="@+id/shopgoodsinfo_comment_username"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp" />
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/shopgoodsinfo_comment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="10dp"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/shopgoodsinfo_admin_comment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="10dp"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/rules"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/goodsinfo_xiangqing" />
+
+                    <TextView
+                        android:id="@+id/shopgoodsinfo_xiangqing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="详情"
+                        android:textColor="@color/userorder_text_color" />
+                </LinearLayout>
+
+
+                <WebView
+                    android:id="@+id/shopgoodsinfo_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+        </com.hechuang.labeego.tools.ui.IdeaScrollView>
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/shopgoodsinfo_store_bay_1dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/goodsinfo_store_bay_layout"
+        android:background="@color/rules" />
+
+    <LinearLayout
+        android:id="@+id/shopgoodsinfo_store_bay_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/shopgoodsinfo_kefu"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/goodsinfo_phont" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="客服"
+                android:textColor="#009944" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/shopgoodsinfo_buynow"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#DD524D"
+            android:text="立即购买"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/shopgoodsinfo_addshopping"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#4CD964"
+            android:text="加入购物车"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/shopgoodsinfo_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/shopgoodsinfo_back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:padding="5dp"
+                android:src="@drawable/back_b" />
+
+            <ImageView
+                android:id="@+id/shopgoodsinfo_title_img"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:padding="5dp"
+                android:src="@mipmap/labeego_icon" />
+
+            <ImageView
+                android:id="@+id/shopgoodsinfo_fenxiang"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/shopgoodsinfo_shoppingcar_layout"
+                android:padding="5dp"
+                android:src="@drawable/goodsinfo_fenxiang" />
+
+            <RelativeLayout
+                android:id="@+id/shopgoodsinfo_shoppingcar_layout"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_margin="5dp">
+
+                <ImageView
+                    android:id="@+id/shopgoodsinfo_shoppingcar"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="10dp"
+                    android:src="@drawable/goodsinfo_shopping_yang" />
+
+                <TextView
+                    android:id="@+id/shopgoodsinfo_shoppingcarnumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/goodsinfo_shoppcarnumber"
+                    android:textColor="@color/white"
+                    android:textSize="11sp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RadioGroup
+            android:id="@+id/shopgoodsinfo_radio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="商品" />
+
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="售后" />
+
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="详情" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/shopgoodsinfo_title_layout_yin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/shopgoodsinfo_back_yin"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/goodsinfo_shoppcar"
+            android:padding="5dp"
+            android:src="@drawable/back" />
+
+        <ImageView
+            android:id="@+id/shopgoodsinfo_fenxiang_yin"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/shopgoodsinfo_shoppingcar_layout_yin"
+            android:background="@drawable/goodsinfo_shoppcar"
+            android:padding="5dp"
+            android:src="@drawable/goodsinfo_fenxiang_yin" />
+
+        <RelativeLayout
+            android:id="@+id/shopgoodsinfo_shoppingcar_layout_yin"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp">
+
+            <ImageView
+                android:id="@+id/shopgoodsinfo_shoppingcar_yin"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/goodsinfo_shoppcar"
+                android:padding="5dp"
+                android:src="@drawable/shoppingcar" />
+
+            <TextView
+                android:id="@+id/shopgoodsinfo_shoppingcarnumber_yin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/goodsinfo_shoppcarnumber"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

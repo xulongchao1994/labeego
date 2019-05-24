@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:zhy="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/goodsinfo_view_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_above="@+id/goodsinfo_guige_text">
+
+            <LinearLayout
+                android:id="@+id/goodsinfo_view_icon_layout"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:alpha="1"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="140dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1.5"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:id="@+id/goodsinfo_view_buy_price"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:lines="2"
+                            android:textColor="@color/textcolor_red"
+                            android:textSize="14sp"/>
+
+                        <ImageView
+                            android:id="@+id/goodsinfo_view_buy_off"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginRight="5dp"
+                            android:src="@drawable/goodsinfo_finsh"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/goodsinfo_view_buy_stock"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:id="@+id/goodsinfo_view_buy_guige_noting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:lines="2"
+                        android:ellipsize="end"
+                        android:text="请选择  商品规格"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/goodsinfo_view_buy_guige_true"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:lines="2"
+                        android:ellipsize="end"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/goodsinfo_view_buy_icon"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/goodsinfo_buy_icon"
+                android:padding="3dp"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/goodsinfo_guige_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/goodsinfo_view_buy_guige"
+            android:alpha="1"
+            android:background="@color/white"
+            android:padding="10dp"
+            android:text="商品规格"
+            android:textColor="@color/black"
+            android:textSize="18sp"/>
+
+
+        <com.zhy.view.flowlayout.TagFlowLayout
+            android:id="@+id/goodsinfo_view_buy_guige"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/goodsinfo_view_buy_buynumber_layout"
+            android:background="@color/white"
+            android:padding="5dp"
+            zhy:max_select="1"
+            />
+
+
+        <LinearLayout
+            android:id="@+id/goodsinfo_view_buy_buynumber_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/goodsinfo_view_buy_number_layout"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:alpha="1"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#F3F3F3"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="1"
+                    android:text="购买数量"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"/>
+
+                <Button
+                    android:id="@+id/goodsinfo_view_buy_reduce_number"
+                    android:layout_width="45dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/goodsinfo_minus_true"/>
+
+                <EditText
+                    android:id="@+id/goodsinfo_view_buy_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@color/white"
+                    android:inputType="number"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="1"
+                    android:textSize="18sp"/>
+
+                <Button
+                    android:id="@+id/goodsinfo_view_buy_addnumber"
+                    android:layout_width="45dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/goodsinfo_add_true"/>
+
+                <TextView
+                    android:id="@+id/goodsinfo_view_buy_liang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#F3F3F3"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/goodsinfo_view_buy_number_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/goodsinfo_view_buy_layout"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="最小起订量:"/>
+
+                <TextView
+                    android:id="@+id/goodsinfo_view_buy_minimum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="最小起订倍数:"/>
+
+                <TextView
+                    android:id="@+id/goodsinfo_view_buy_zuixiaobeishu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/goodsinfo_view_buy_layout"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/goodsinfo_view_buy_buy"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#1D8233"
+                android:text="确定"
+                android:textColor="@color/white"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

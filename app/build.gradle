@@ -1,0 +1,178 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'com.mob.sdk'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.hechuang.labeego"
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 34
+        versionName "1.10.4"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
+        }
+    }
+    signingConfigs {
+        release {
+            keyAlias 'labeego'
+            keyPassword 'lafeng'
+            storeFile file(getRootDir().getPath() + '/labeego.jks')
+            storePassword 'lafeng'
+        }
+        debug {
+            keyAlias 'labeego'
+            keyPassword 'lafeng'
+            storeFile file(getRootDir().getPath() + '/labeego.jks')
+            storePassword 'lafeng'
+        }
+    }
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            // 显示Log
+//            buildConfigField "boolean", "LOG_release", "true"
+            minifyEnabled true
+            // Zipalign优化
+            zipAlignEnabled true
+//            debuggable true
+//             移除无用的resource文件
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            signingConfig signingConfigs.debug
+//            testCoverageEnabled true
+//             设置id可以同时安装多个
+//            applicationIdSuffix "labee"
+//            applicationIdSuffix "OutNetPackage"
+//            debuggable true
+//            zipAlignEnabled true
+//            minifyEnabled true
+//            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    allprojects {
+        repositories {
+            maven { url "https://jitpack.io" }
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDir 'libs'
+            jni.srcDirs = []
+            assets.srcDirs = ['src/main/assets']
+        }
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+
+
+}
+MobSDK {
+    appKey "2683dd390373e"
+    appSecret "11b94b38db82605c12c53d0d50fa324f"
+
+    ShareSDK {
+        devInfo {
+            Wechat {
+                appId "wxdb3544f8357ffde0"
+                appSecret "be70b7511302bc65f8e5f6ab586257ab"
+            }
+
+            WechatMoments {
+                appId "wxdb3544f8357ffde0"
+                appSecret "be70b7511302bc65f8e5f6ab586257ab"
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.android.support:design:27.1.1'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    //retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    //rxjava
+    implementation 'io.reactivex:rxjava:1.3.8'
+    implementation 'io.reactivex:rxandroid:1.2.1'
+    //
+    implementation 'com.squareup.okhttp:okhttp:2.7.5'
+    implementation 'org.mod4j.org.apache.commons:lang:2.1.0'
+    //cookie管理
+    implementation 'com.github.franmontiel:PersistentCookieJar:v1.0.1'
+    //glide
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+    //glide图形转换工具
+    implementation 'jp.wasabeef:glide-transformations:2.0.1'
+    //butterkenife
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    //腾讯x5
+    implementation files('libs/tbs_sdk_thirdapp_v3.6.0.1234_43608_sharewithdownload_withoutGame_obfs_20180510_111111.jar')
+    //修改状态栏颜色
+    implementation 'com.gyf.barlibrary:barlibrary:2.3.0'
+    //banner
+    implementation 'com.youth.banner:banner:1.4.10'
+    //商品规格选择
+    implementation 'cn.lankton:flowlayout:1.0.1'
+    /**
+     *  recyclerview的适配器
+     */
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.40'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    //等待框样式
+    implementation 'com.wang.avi:library:2.1.3'
+    /**
+     *  版本更新
+     */
+    implementation 'com.allenliu.versionchecklib:library:2.0.8'
+    /**
+     *  评分星标控件
+     */
+    implementation 'me.zhanghai.android.materialratingbar:library:1.3.1'
+    /**
+     *  商品详情属性选择
+     */
+    implementation 'com.hyman:flowlayout-lib:1.1.2'
+    /**
+     * 支付宝
+     */
+//    implementation files('libs/alipaySdk-20180601.jar')
+    implementation (name: 'alipaySdk-15.5.9-20181123210657-noUtdid', ext: 'aar')
+
+    /**
+     * 微信sdk
+     */
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+    /**
+     * aliyun热修复
+     */
+    implementation('com.aliyun.ams:alicloud-android-hotfix:3.2.6') {
+        exclude(module: 'alicloud-android-utdid')
+    }
+
+}
+repositories {
+    mavenCentral()
+}

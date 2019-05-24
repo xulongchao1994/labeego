@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="layout_view_hight">1dp</dimen>
+    <dimen name="title_xlarge_h">70dp</dimen>
+    <dimen name="layout_edit_name_marginleft">25dp</dimen>
+    <dimen name="layout_edit_height">45dp</dimen>
+    <dimen name="layout_view_marginLR">25dp</dimen>
+    <dimen name="activity_main_button_paing">4dp</dimen>
+    <dimen name="button_margin_LR">20dp</dimen>
+    <dimen name="button_margin_T">30dp</dimen>
+    <dimen name="button_hight">50dp</dimen>
+    <dimen name="button_textsize">18sp</dimen>
+
+</resources>

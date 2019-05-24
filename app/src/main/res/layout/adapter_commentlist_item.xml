@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/commentlsit_item_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+
+        <ImageView
+            android:id="@+id/commentlist_item_usericon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/labeego_icon"/>
+
+        <TextView
+            android:id="@+id/commentlist_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/commentlist_item_time"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ellipsize="end"
+            android:textColor="@color/userorder_text_color"
+            android:gravity="center_vertical|right"
+            android:layout_marginRight="15dp"
+            android:lines="1"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+    <include layout="@layout/view_1dp_h_p_10dp"/>
+
+    <TextView
+        android:id="@+id/commentlist_item_stylename"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:textColor="@color/userorder_text_color"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/commentlist_item_context"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/commentlsit_item_title_layout"/>
+
+    <TextView
+        android:id="@+id/commentlist_item_admin_context"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textColor="@color/rules"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/commentlist_item_context"/>
+
+    <include layout="@layout/view_10dp_h"/>
+</LinearLayout>

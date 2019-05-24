@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="activity_bg">#EFEFF4</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="rules">#EFEFF4</color>
+    <color name="textcolor_red">#FF0000</color>
+
+    <color name="goods_item_text_selected">@color/white</color>
+    <color name="goods_item_btn_bg_normal">#F5F5F5</color>
+    <color name="goods_item_btn_bg_selected">#ff8000</color>
+    <color name="goods_item_btn_bg_border">@color/goods_item_btn_bg_selected</color>
+    <color name="goods_item_text_normal">#979797</color>
+    <color name="title_bg">#f9f9f9</color>
+    <color name="view_bg">#9E9E9E</color>
+    <color name="order_N_textclor">#F89948</color>
+    <color name="touming">#00000000</color>
+    <color name="userorder_text_color">#999999</color>
+    <color name="shoppingcar_go">#009688</color>
+    <color name="aloorodertitle">#F6F6F6</color>
+
+    <color name="setnametextcolor">#388FFC</color>
+    <color name="liftrecyclerview">#EFEFF4</color>
+</resources>

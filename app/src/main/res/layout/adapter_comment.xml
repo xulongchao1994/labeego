@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:focusable="false"
+              android:background="@color/white"
+              android:focusableInTouchMode="false"
+              android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/rules"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/adapter_comment_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/labeego_icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="描述相符"
+            android:textColor="@color/black"/>
+
+        <me.zhanghai.android.materialratingbar.MaterialRatingBar
+            android:id="@+id/adapter_comment_pingfen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:maxHeight="25dp"
+            android:minHeight="25dp"
+            android:numStars="5"
+            android:rating="5"
+            android:stepSize="1"
+            app:mrb_progressTint="#FF5002"
+            app:mrb_secondaryProgressTint="#C9C8CC"/>
+
+        <TextView
+            android:id="@+id/adapter_comment_pingfen_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="40dp"
+            android:layout_weight="0.4"
+            android:gravity="center"
+            android:text="非常好"/>
+    </LinearLayout>
+
+    <include layout="@layout/view_1dp_h_p_10dp"/>
+
+    <EditText
+        android:id="@+id/adapter_comment_contenxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="top"
+        android:hint="给其他想买的小伙伴做个参考呗"
+        android:lines="4"
+        android:padding="10dp"
+        android:textSize="14sp"/>
+
+    <include layout="@layout/view_1dp_h_p_10dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/adapter_comment_niming"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/shoppingcar_choice_true"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:text="匿名"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/adapter_comment_niming_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="你的评价能帮助其他小伙伴呦"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/adapter_comment_niming_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+</LinearLayout>

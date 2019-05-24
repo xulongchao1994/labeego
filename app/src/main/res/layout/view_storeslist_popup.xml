@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/storelist_zonghe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="综合排序"
+        android:textColor="@color/black"/>
+
+    <include layout="@layout/view_1dp_h"/>
+
+    <TextView
+        android:id="@+id/storelist_gaodi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="价格从高到低"
+        android:textColor="@color/black"/>
+
+    <include layout="@layout/view_1dp_h"/>
+
+    <TextView
+        android:id="@+id/storelist_digao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="价格从低到高"
+        android:textColor="@color/black"/>
+
+    <include layout="@layout/view_1dp_h"/>
+
+    <TextView
+        android:id="@+id/storelist_xiaoliang_gaodi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="销量从高到低"
+        android:textColor="@color/black"/>
+
+    <include layout="@layout/view_1dp_h"/>
+
+    <TextView
+        android:id="@+id/storelist_xiaoliang_digao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="销量从低到高"
+        android:textColor="@color/black"/>
+
+    <include layout="@layout/view_1dp_h"/>
+</LinearLayout>

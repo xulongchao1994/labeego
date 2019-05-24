@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TAGImageView">
+        <!-- 标签名 -->
+        <attr name="tagName" format="reference|string"/>
+        <attr name="tagBackground" format="reference|color"/>
+        <attr name="tagTextSize" format="reference|dimension"/>
+        <attr name="tagTextColor" format="reference|color"/>
+        <attr name="tagPosition" format="reference|dimension"/>
+        <attr name="tagVisiable" format="boolean"/>
+
+        <attr name="imageDescriptName" format="reference|string"/>
+        <attr name="imageDescriptColor" format="reference|color"/>
+        <attr name="imageDescriptGravity">
+            <enum name="left_bottom" value="0"/>
+            <enum name="right_bottom" value="1"/>
+        </attr>
+        <attr name="imageDescriptPadding" format="reference|dimension"/>
+
+    </declare-styleable>
+    <declare-styleable name="GoodsViewGroup">
+        <attr name="isSelector" format="boolean"/>
+        <attr name="normal_drawable" format="reference"/>
+        <attr name="selected_drawable" format="reference"/>
+        <attr name="normal_textColor" format="color"/>
+        <attr name="selected_textColor" format="color"/>
+        <attr name="itemTextSize" format="dimension"/>
+        <attr name="horInterval" format="dimension"/>
+        <attr name="verInterval" format="dimension"/>
+        <attr name="horPadding" format="dimension"/>
+        <attr name="verPadding" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="innerrect">
+        <attr name="inner_width" format="dimension"/>
+        <attr name="inner_height" format="dimension"/>
+        <attr name="inner_margintop" format="dimension" />
+        <attr name="inner_corner_color" format="color" />
+        <attr name="inner_corner_length" format="dimension" />
+        <attr name="inner_corner_width" format="dimension" />
+        <attr name="inner_scan_bitmap" format="reference" />
+        <attr name="inner_scan_speed" format="integer" />
+        <attr name="inner_scan_iscircle" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="ViewfinderView">
+        <attr name="corner_color" format="color"/>
+        <attr name="laser_color" format="color"/>
+        <attr name="frame_color" format="color"/>
+        <attr name="mask_color" format="color"/>
+        <attr name="result_point_color" format="color"/>
+        <attr name="result_color" format="color"/>
+        <attr name="label_text_color" format="color"/>
+        <attr name="label_text" format="string"/>
+        <attr name="label_text_size" format="float"/>
+    </declare-styleable>
+</resources>

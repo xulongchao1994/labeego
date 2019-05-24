@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/dp_10">
+
+    <LinearLayout
+        android:id="@+id/minebutton_moreorder_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_10">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="我的订单"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/minebutton_moreorder_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="查看更多订单"
+            android:textColor="@color/userorder_text_color"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/minebutton_moreorder_img"
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/right"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <include layout="@layout/view_1dp_h_p_10dp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/minebutton_moreorder_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/minebutton_moreorder_layout"
+
+        />
+</LinearLayout>

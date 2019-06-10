@@ -83,7 +83,6 @@ android {
 MobSDK {
     appKey "2683dd390373e"
     appSecret "11b94b38db82605c12c53d0d50fa324f"
-
     ShareSDK {
         devInfo {
             Wechat {
@@ -159,7 +158,7 @@ dependencies {
      * 支付宝
      */
 //    implementation files('libs/alipaySdk-20180601.jar')
-    implementation (name: 'alipaySdk-15.5.9-20181123210657-noUtdid', ext: 'aar')
+    implementation(name: 'alipaySdk-15.5.9-20181123210657-noUtdid', ext: 'aar')
 
     /**
      * 微信sdk

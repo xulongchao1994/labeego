@@ -1,0 +1,33 @@
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0;}
+.fl{float: left}.fr{float: right}
+.clearfix:after {content: ".";display:block; height:0; clear:both;visibility:hidden;}.clearfix { zoom:1; }
+/* 去除iPhone中默认的input样式 */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input {
+	/*让它看起来像是一个按钮*/
+	-webkit-appearance: none;
+	resize: none;
+}
+ul,ol {list-style: none;}
+body,html,input{font-family:"苹方","Helvetica","微软雅黑";tahoma, arial, \5b8b\4f53, sans-serif;}
+body{background: #161824;color: #D7D7D7;}
+		
+.head{padding:2% 3%;border-bottom: 1px solid #535353;height: 9.3vw;display: flex;justify-content:space-between;align-items: center;}
+.head img{width:2.4vw;height:5.4vw;}
+
+.content_k{padding:2% 3%;}
+textarea{width:100%;height:80vw;background: none;border:0;color: #fff;font-size: 4vw;text-indent: 4vw;}
+.submit{border:none;background: transparent;color: #fff;}
+/* 添加图片 */
+.img_k{padding:2% 1%;display: flex;align-items: center;}
+.img_k li{width:24%;height:26vw;margin-left:2%;
+background-image: url(../img/imgBg.png);
+background-size: 100%;background-repeat: no-repeat;background-position: center center;
+position: relative;}
+.img_k li input{width: 100%;height: 100%;opacity: 0; position: absolute;left: 0;top: 0;cursor: pointer;}
+.img_k li p{position: absolute;top:64%;width:100%;text-align: center;}
+.img_k li img{position: absolute;right:-6%;top:-6%;width:6vw;}
+/* 底部说明 */
+.explain{padding:3% 3%;border-top: 1px solid #535353;}

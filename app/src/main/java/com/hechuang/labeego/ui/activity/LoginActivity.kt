@@ -95,7 +95,6 @@ class LoginActivity : BaseActivity<LoginPersenter>(), ILoginView, View.OnClickLi
         UserData.USERNAME = phoneSuccessBean.data.list[0].userId
         UserData.USERTYPE = phoneSuccessBean.data.list[0].userType
         UserData.UNIONID = phoneSuccessBean.data.list[0].trueName
-//        UserData.userimg = phoneSuccessBean.data.list[0].avatarUrl
         UserData.USERSESSIONID = phoneSuccessBean.data.list[0].sessionid
         UserData.USERTOKENID = phoneSuccessBean.data.list[0].token
         UserData.USERISLOGIN = true
@@ -109,12 +108,7 @@ class LoginActivity : BaseActivity<LoginPersenter>(), ILoginView, View.OnClickLi
         if (login_popupWindow != null && login_popupWindow!!.isShowing) {
             login_popupWindow!!.dismiss()
         }
-
-//        val intent = Intent(this@LoginActivity, WebsActivity::class.java)
-//        intent.putExtra("web_url", Web_Url.ME_URL)
-//        startActivity(intent)
         startActivity(Intent(this@LoginActivity, WebsActivity::class.java))
-//        finish()
     }
 
     override fun getphoneloginerror(msg: String) {
@@ -258,8 +252,6 @@ class LoginActivity : BaseActivity<LoginPersenter>(), ILoginView, View.OnClickLi
                 pswbuffer!!.append(mNameList[i].psw + ",")
             }
         }
-//        Log.d("login", namebuffer.toString() + "\n" + pswbuffer.toString())
-//        MyToast.showMsg(msg)
         Toast.makeText(this, "登录成功", Toast.LENGTH_SHORT).show()
         namelist_str = namebuffer.toString()
         pswlist_str = pswbuffer.toString()
@@ -290,6 +282,7 @@ class LoginActivity : BaseActivity<LoginPersenter>(), ILoginView, View.OnClickLi
                 startActivity(intent1)
                 finish()
             }
+
             "2" -> {
                 val intent = Intent(LOGINACTION)
                 intent.putExtra("weizhi", 1)
@@ -299,6 +292,7 @@ class LoginActivity : BaseActivity<LoginPersenter>(), ILoginView, View.OnClickLi
                 startActivity(intent1)
                 finish()
             }
+
             "3" -> {
                 startActivity(Intent(this, WebsActivity::class.java))
                 finish()

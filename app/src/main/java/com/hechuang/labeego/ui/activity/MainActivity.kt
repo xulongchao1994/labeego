@@ -146,31 +146,32 @@ class MainActivity : BaseActivity<MainPersenter>(), IMainView {
 
     var isfast: Int? = null
     override fun initView() {
-        val username: String?
-        val password: String?
-        sp = getSharedPreferences("USERINFO", Context.MODE_PRIVATE)
-        val isoutlogin = sp!!.getBoolean("islogin", false)
-        isfast = sp!!.getInt("isfast", 0)
-//        Log.d("mainactivity", "onHandleIntent: $isoutlogin ${ApiFactify.HOST}")
-        if (!isoutlogin) {
-            username = ""
-            password = ""
-        } else {
-            username = sp!!.getString("username", "")
-            password = sp!!.getString("token_id", "")
-        }
-        editor = sp!!.edit()
-//        val password2 = MD5Builder.getMD5Str(password!!)
-        mPersenter!!.logind_main(username!!, password!!)
-        if (Build.VERSION.SDK_INT >= 26) {
-            val b = packageManager.canRequestPackageInstalls()
-            if (!b) {
-                requestPermissions(arrayOf(Manifest.permission.REQUEST_INSTALL_PACKAGES), 222)
-            } else {
-            }
-        } else {
-        }
-        exit()
+//        val username: String?
+//        val password: String?
+//        sp = getSharedPreferences("USERINFO", Context.MODE_PRIVATE)
+//        val isoutlogin = sp!!.getBoolean("islogin", false)
+//        isfast = sp!!.getInt("isfast", 0)
+////        Log.d("mainactivity", "onHandleIntent: $isoutlogin ${ApiFactify.HOST}")
+//        if (!isoutlogin) {
+//            username = ""
+//            password = ""
+//        } else {
+//            username = sp!!.getString("username", "")
+//            password = sp!!.getString("token_id", "")
+//        }
+//        editor = sp!!.edit()
+////        val password2 = MD5Builder.getMD5Str(password!!)
+//        mPersenter!!.logind_main(username!!, password!!)
+//        if (Build.VERSION.SDK_INT >= 26) {
+//            val b = packageManager.canRequestPackageInstalls()
+//            if (!b) {
+//                requestPermissions(arrayOf(Manifest.permission.REQUEST_INSTALL_PACKAGES), 222)
+//            } else {
+//            }
+//        } else {
+//        }
+//        exit()
+        startActivity(Intent(this@MainActivity, WebsActivity::class.java))
     }
 
     override fun initPersenter() {

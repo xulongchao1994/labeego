@@ -1,0 +1,29 @@
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0;}
+.fl{float: left}.fr{float: right}
+.clearfix:after {content: ".";display:block; height:0; clear:both;visibility:hidden;}.clearfix { zoom:1; }
+/* 去除iPhone中默认的input样式 */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input {
+	/*让它看起来像是一个按钮*/
+	-webkit-appearance: none;
+	resize: none;
+}
+ul,ol {list-style: none;}
+body,html,input{font-family:"苹方","Helvetica","微软雅黑";tahoma, arial, \5b8b\4f53, sans-serif;}
+body{background: #fffff;color: #000;}
+		
+.head{border-bottom:1px solid #EEEEEE;text-align: center;padding:3% 2%;}
+.head img{width: 3vw;}
+/* 名单 */
+.list_k{padding:0 2%;}
+.flex{display: flex;justify-content:space-between;line-height: 16vw;
+padding:3% 0;border-bottom:1px solid #EEEEEE;}
+.flex .img{width:16vw;height:16vw;border-radius: 100%;overflow: hidden;}
+.flex .img img{width:140%;}
+.flex p{margin-left: -36%;}
+.flex div.blackButton{width:24vw;height:7vw;
+background: #333; color: #fff;
+line-height: 7vw;text-align: center;border-radius: 2px;margin-top:4%;
+}

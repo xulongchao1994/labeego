@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>黑名单</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/pullBlack.css"/>
+		<script src="js/jquery-1.10.1.min.js"></script>
+    </head>
+    <body>
+		<div class="head">
+			<img class="fl" src="img/L_return.png" alt="">
+			<p>黑名单</p>
+		</div>
+		
+		<div class="list_k">
+			<!-- <div class="flex">
+				<div class="img">
+					<img src="img/1.jpg" alt="">
+				</div>
+				<p>远走高飞</p>
+				<div class="blackButton">解除拉黑</div>
+			</div> -->
+		</div>
+      
+	
+    </body>
+	<script>
+		$(function(){
+			//需要从OC那里拿值，之后会触发OC的sendValueToHtml方法
+			function getValueFromOC(){
+			    native.sendValueToHtml();
+			}
+			//接收从OC传过来的值，需要OC调用该方法，并传入值
+			function getUserNameAndAge(ocValueOne){
+			    alert('uId:'+uId);
+				uId = 1;
+			}
+			$.ajax({
+				type:"post",
+				url:"http://abc.smnn.top:8082/user/findBlacklists",
+				data:{
+					uId:2,
+				},
+				success:function(e){
+					var number = e.result;
+					for(var i=0; i<number.length;i++){
+						var info = number[i];
+						var list = '<div class="flex">'
+										+'<div class="img">'
+											+'<img src='+info.head+' alt="">'
+										+'</div>'
+										+'<p>'+info.name+'</p>'
+										+'<div class="blackButton" data="'+info.uId+'">解除拉黑</div>'
+									+'</div>'
+						$(".list_k").append(list);
+					}
+					
+				},
+				error:function(e){
+					console.log(e)
+				}
+			})
+		});
+		$(".list_k").on("click",".blackButton",function(){
+			index = $(this).parent(".flex").index();
+			var uid = $(this).attr("data");
+			/* console.log(data); */
+			$.ajax({
+				type:"post",
+				url:"http://abc.smnn.top:8082/user/deleteBlacklist",
+				data:{"uId" : "2" , "delUid" : uid},
+				success:function(e){
+					$(".list_k").eq(index).remove();
+					alert("删除成功！");
+					window.history.go(0);
+				},
+				error:function(e){
+					console.log(e);
+				}
+			});
+		});
+	</script>
+</html>

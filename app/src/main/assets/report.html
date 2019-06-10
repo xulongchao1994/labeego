@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>举报</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/report.css"/>
+</head>
+<body>
+<form id="form1" onsubmit="return false" action="#" method="post"><!-- action="http://abc.smnn.top:8082/post/addReport" -->
+    <div class="head">
+        <img src="img/return.png" alt="">
+        <p>举报</p>
+        <div class="submit">提交</div>
+    </div>
+    <input type="hidden" name="rId" id="rId" value="">
+    <input type="hidden" name="uId" id="uId" value="">
+    <input type="hidden" name="pId" id="pId" value="">
+    <div class="content_k">
+        <textarea placeholder="请输入您要举报的理由..." name="context" rows="" cols=""></textarea>
+    </div>
+    <!-- 添加图片 -->
+    <ul class="img_k">
+        <li class="one">
+            <input type="file" name="files" accept=""/>
+            <p>1/4</p>
+            <img class="close" src="" alt="">
+        </li>
+    </ul>
+
+</form>
+
+<!-- 底部说明 -->
+<div class="explain">
+    您的举报我们将在12小时之内受理审核，如果举报属实我们将对违规账号进行严肃处理。如果涉嫌恶意举报我们将保留追究您的责任。谢谢！
+</div>
+
+</body>
+<script>
+	function getandroid(sdfasdfa, two, three) {
+			alert(sdfasdfa+two+three);
+			rId = sdfasdfa;
+			uId = two;
+			pId = three;
+			$("#rId").val(rId);
+			$("#uId").val(uId);
+			$("#pId").val(pId);
+		}
+		$(".img_k").on("change", "li input", function() { //添加图片事件
+			alert("1");
+			index = $(this).parent("li").index();
+			var file = this.files[0];
+			// 确认选择的文件是图片
+			if (file.type.indexOf("image") == 0) {
+				var reader = new FileReader();
+				reader.readAsDataURL(file);
+				reader.onload = function(e) {
+					// 图片base64化
+					var newUrl = this.result;
+					$(".img_k li").eq(index).css("background-image", 'url(' + newUrl + ')'); //LI添加图片路径
+					$(".img_k li").eq(index).children("p").html(''); //当前的文字清空
+					$(".img_k li").eq(index).children("img").attr("src", "img/close.png"); //当前的添加清除按钮
+					var nextNumber = index + 2;
+					var number = $(".img_k li").length;
+					//console.log("我是第一个数字"+nextNumber+"我是第二个数字"+number)
+					if (number < 4 && nextNumber > number) {
+						var next = '<li class="">' +
+							'<input type="file" name="files" accept="" />' +
+							'<p>' + nextNumber + '/4</p>' +
+							'<img class="close" src="" alt="">' +
+							'</li>'
+						$('.img_k').append(next);
+					}
+				};
+			}
+			alert("2");
+		});
+		$(".img_k").on("click", "li img", function() { //关闭按钮事件
+			var index = $(this).parent("li").index();
+			$(".img_k li").eq(index).remove();
+			var next = index + 1;
+			if ($(".img_k li").last().css("background-image").indexOf("imgBg.png") == -1 || number == 0) {
+				var next = '<li class="">' +
+					'<input type="file" name="files" accept="" />' +
+					'<p>4/4</p>' +
+					'<img class="close" src="" alt="">' +
+					'</li>'
+				$('.img_k:last').append(next);
+			}
+			var number = $(".img_k li").length;
+			if (number != 4 || $(".img_k li").last().css("background-image").indexOf("imgBg.png") != -1 && number == 4) {
+				$(".img_k li").last().children("p").html(number + '/4');
+			}
+
+
+		});
+		$(".submit").click(function() {
+			var textareaText = $("textarea").text();
+			console.log(textareaText);
+			$.ajax({
+				type: "post",
+				url: "http://abc.smnn.top:8082/post/addReport",
+				data: $('#form1').serialize(),
+				success: function(e) {
+					console.log(e); //打印服务端返回的数据(调试用)
+					if (e.message == "举报成功") {
+						alert("举报成功");
+					};
+				},
+				error: function(e) {
+					console.log(e);
+				}
+			});
+
+		});
+</script>
+</html>
